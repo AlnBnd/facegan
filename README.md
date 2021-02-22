@@ -16,7 +16,8 @@ pip3 install numpy==1.16.4
 ```
 
 ### Usage
-1. Generate image
+1. Download the model [stylegan2-ffhq-config-f.pkl](https://nvlabs-fi-cdn.nvidia.com/stylegan2/networks/) to a folder /networks 
+2. Generate image
 ```
 python3 main.py
 ```
@@ -25,7 +26,7 @@ python3 create_photo.py
 ```
 <img src='./results/0.png' width=200> <img src='./results/1.png' width=200> <img src='./results/2.png' width=200> <img src='./results/3.png' width=200>  
 
-2. 
+3. 
 We can select the necessary functions to change the image using the notebook.
 
 [Colab]()
