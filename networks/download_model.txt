@@ -1,0 +1,4 @@
+
+Download model stylegan2-ffhq-config-f.pkl
+
+	Download link: https://nvlabs-fi-cdn.nvidia.com/stylegan2/networks/
