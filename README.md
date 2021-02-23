@@ -28,7 +28,7 @@ python3 create_photo.py
 3. 
 We can select the necessary functions to change the image using the notebook.
 
-[Colab](face_edited.ipynb)
+[Colab](./face_edited.ipynb)
 
 <img src='./results/screen/screen_15.png' width=250 height=250> <img src='./results/param/15.png' width=250>
 
