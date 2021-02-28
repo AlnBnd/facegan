@@ -10,9 +10,9 @@ import cv2
 import dlib
 import argparse
 
-import face3d.face3d
-from face3d.face3d import mesh_numpy
-from face3d.face3d.morphable_model import MorphabelModel
+
+from face3d import mesh_numpy
+from face3d.morphable_model import MorphabelModel
 
 
 
@@ -31,7 +31,7 @@ def main(args):
         h, w, c = im.shape
 
         detector = dlib.get_frontal_face_detector()
-        predictor = dlib.shape_predictor("face3d/examples/models/shape_predictor_68_face_landmarks.dat")
+        predictor = dlib.shape_predictor("face3d/models/shape_predictor_68_face_landmarks.dat")
 
         rects = detector(gray, 1)
         shape = predictor(gray, rects[0])
@@ -46,7 +46,7 @@ def main(args):
             landmarks[i] = [p.x, p.y]
             im = cv2.circle(im, (p.x, p.y), radius=3, color=(0, 0, 255), thickness=5)
 
-        bfm = MorphabelModel('face3d/examples/Data/BFM/Out/BFM.mat')
+        bfm = MorphabelModel('face3d/Data/BFM/Out/BFM.mat')
         x = mesh_numpy.transform.from_image(landmarks, h, w)
         X_ind = bfm.kpt_ind
 
